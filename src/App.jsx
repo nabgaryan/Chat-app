@@ -7,8 +7,6 @@ import "firebase/auth";
 import SignIn from "./components/SignIn";
 import ChatRoom from "./components/ChatRoom";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { collection, doc, getDocs } from "firebase/firestore";
-import { useEffect } from "react";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBmL5gMAl-crTmvyac9GWvk1IxVr2B5WDQ",
