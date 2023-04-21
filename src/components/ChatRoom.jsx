@@ -14,15 +14,16 @@ const ChatRoom = () => {
 
   const sendMessage = async (e) => {
     e.preventDefault();
-    const { uid, photoURL } = auth.currentUser;
+    const { uid, photoURL, displayName } = auth.currentUser;
     await addDoc(messagesRef, {
       text: formValue,
       createdAt: serverTimestamp(),
       uid,
       photoURL,
+      displayName,
     });
     setFormValue("");
-    dummy.current.scrollIntoView({behavior: 'smooth'});
+    dummy.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
