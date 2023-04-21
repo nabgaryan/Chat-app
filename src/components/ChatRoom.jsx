@@ -8,7 +8,7 @@ import { serverTimestamp } from "firebase/firestore";
 const ChatRoom = () => {
   const [formValue, setFormValue] = useState("");
   const messagesRef = collection(db, "messages");
-  const q = query(messagesRef, orderBy("createdAt"), limit(25));
+  const q = query(messagesRef, orderBy("createdAt"), limit(1000));
   const [messages] = useCollectionData(q);
   const dummy = useRef();
 
